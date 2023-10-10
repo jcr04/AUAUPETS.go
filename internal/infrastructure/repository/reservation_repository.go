@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"AUAUPets/internal/domain/reservation"
+	"github.com/jcr04/AUAUPETS.go/internal/domain/reservation"
 )
 
 type ReservationRepository struct {

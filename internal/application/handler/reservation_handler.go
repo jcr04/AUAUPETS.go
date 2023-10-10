@@ -1,11 +1,12 @@
 package handler
 
 import (
-	"AUAUPets/internal/domain/reservation"
-	"AUAUPets/internal/infrastructure/repository"
 	"encoding/json"
 	"net/http"
 	"time"
+
+	"github.com/jcr04/AUAUPETS.go/internal/domain/reservation"
+	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/repository"
 )
 
 func CreateReservationHandler(w http.ResponseWriter, r *http.Request) {

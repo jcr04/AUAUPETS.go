@@ -3,7 +3,7 @@ package api
 import (
 	"net/http"
 
-	"github.com/usuario/go/auaupets/internal/application/handler"
+	"github.com/jcr04/AUAUPETS.go/internal/application/handler"
 )
 
 func StartServer() {

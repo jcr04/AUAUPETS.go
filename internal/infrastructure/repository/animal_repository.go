@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"AUAUPets/internal/domain/animal"
+	"github.com/jcr04/AUAUPETS.go/internal/domain/animal"
 )
 
 type AnimalRepository struct {

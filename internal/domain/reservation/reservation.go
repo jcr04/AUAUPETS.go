@@ -1,8 +1,9 @@
 package reservation
 
 import (
-	"AUAUPets/internal/domain/animal"
 	"time"
+
+	"github.com/jcr04/AUAUPETS.go/internal/domain/animal"
 )
 
 type Reservation struct {

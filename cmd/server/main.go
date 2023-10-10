@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/usuario/auaupets/internal/infrastructure/api"
+	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/api"
 )
 
 func main() {

@@ -1,9 +1,10 @@
 package handler
 
 import (
-	"AUAUPets/internal/domain/animal"
 	"encoding/json"
 	"net/http"
+
+	"github.com/jcr04/AUAUPETS.go/internal/domain/animal"
 )
 
 func CreateAnimalHandler(w http.ResponseWriter, r *http.Request) {
