@@ -41,6 +41,3 @@ git clone https://github.com/jcr04/AUAUPETS.go.git
         ```
     2. Execute o servidor:
         go run cmd/server/main.go
-
-🖥️ Uso
-A API expõe vários endpoints para gerenciar animais e reservas. Aqui estão alguns exemplos de como você pode interagir com a API:
