@@ -23,3 +23,12 @@ func (repo *PetRepository) GetPetByID(id string) (*animal.Animal, error) {
 	}
 	return &pet, nil
 }
+
+func (repo *PetRepository) CreateAnimal(a *animal.Animal) error {
+	query := `
+        INSERT INTO Pets (Name, Breed, Age, CheckIn, CheckOut)
+        VALUES ($1, $2, $3, $4, $5)
+        RETURNING ID;
+    `
+	return repo.db.QueryRow(query, a.Name, a.Breed, a.Age, a.CheckIn, a.CheckOut).Scan(&a.ID)
+}

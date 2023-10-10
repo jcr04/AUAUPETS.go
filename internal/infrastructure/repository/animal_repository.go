@@ -14,5 +14,5 @@ func NewAnimalRepository() *AnimalRepository {
 
 func (repo *AnimalRepository) GetAnimalByID(id string) (*animal.Animal, error) {
 	// Simulate a database fetch
-	return animal.NewAnimal("1", "Fido", "Labrador", "15"), nil
+	return animal.NewAnimal("1", "Fido", "Labrador", 15, "2023-10-10", "2023-10-20"), nil
 }

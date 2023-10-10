@@ -9,10 +9,17 @@ import (
 )
 
 func CreateAnimalHandler(w http.ResponseWriter, r *http.Request) {
-	// Parse request and create a new animal
-	// ...
-	newAnimal := animal.NewAnimal("1", "Fido", "Labrador", "15")
-	json.NewEncoder(w).Encode(newAnimal)
+	var newAnimal animal.Animal
+	if err := json.NewDecoder(r.Body).Decode(&newAnimal); err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+	petRepo := repository.NewPetRepository()
+	if err := petRepo.CreateAnimal(&newAnimal); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	json.NewEncoder(w).Encode(newAnimal) // Retorne o animal criado com o ID atribuído
 }
 
 func GetAnimalHandler(w http.ResponseWriter, r *http.Request) {
