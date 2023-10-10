@@ -2,7 +2,11 @@
 
 AUAUPETS é uma API de gestão de animais e reservas construída em Go. É uma solução perfeita para gerenciar pets e suas estadias.
 
+## Leia Code documentation
+[Codedoc](https://github.com/jcr04/AUAUPETS.go/blob/main/codedoc.md)
+
 ## 🚀 Começando
+
 
 Essas instruções fornecerão uma cópia do projeto em execução na sua máquina local para desenvolvimento e testes.
 
