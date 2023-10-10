@@ -16,7 +16,7 @@ Essas instruções fornecerão uma cópia do projeto em execução na sua máqui
 1. Clone o repositório para a sua máquina local:
 ```bash
 git clone https://github.com/jcr04/AUAUPETS.go.git
-
+```
 2. Navegue até o diretório do projeto:
     cd AUAUPETS.go
 3. Instale todas as dependências necessárias:
@@ -28,6 +28,7 @@ git clone https://github.com/jcr04/AUAUPETS.go.git
         CREATE DATABASE Pets
         ```
         em seguida coloque
+        
         ```sql
         CREATE TABLE Pets (
         ID SERIAL PRIMARY KEY,
