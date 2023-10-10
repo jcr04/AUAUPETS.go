@@ -52,6 +52,8 @@ A API oferece os seguintes endpoints:
 
 Animnals:
 /animals (POST): Criar animnal 
+* - ![Screenshot_22](https://github.com/jcr04/AUAUPETS.go/assets/70778525/a9f02d16-d423-4aa7-b37f-ade47ffcbd24)
+* - ![Screenshot_23](https://github.com/jcr04/AUAUPETS.go/assets/70778525/c94846c0-049d-4103-ae21-fc0f27642338)
 
 ## Executando a API
 
