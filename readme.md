@@ -26,7 +26,7 @@ git clone https://github.com/jcr04/AUAUPETS.go.git
 3. Instale todas as dependências necessárias:
     go mod tidy
 4. Configure o banco de dados Postgres e atualize o arquivo de configuração de banco de dados conforme necessário.
-    1. execute essas qeurys:
+    1. execute essas querys:
         1. 
         ```sql
         CREATE DATABASE Pets
