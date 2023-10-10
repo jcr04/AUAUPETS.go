@@ -10,7 +10,6 @@ import (
 func NewRouter() *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/animals", handler.CreateAnimalHandler).Methods("POST")
-	// ... outras rotas
 	return r
 }
 

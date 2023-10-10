@@ -12,8 +12,12 @@ import (
 func CreateReservationHandler(w http.ResponseWriter, r *http.Request) {
 	// Parse request and create a new reservation
 	// ...
-	animalRepo := repository.NewAnimalRepository()
-	animal, _ := animalRepo.GetAnimalByID("1")
+	petRepo := repository.NewPetRepository() // Alterado de NewAnimalRepository para NewPetRepository
+	animal, err := petRepo.GetPetByID("1")   // Alterado de GetAnimalByID para GetPetByID
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 	checkIn := time.Now()
 	checkOut := checkIn.Add(24 * time.Hour)
 	newReservation := reservation.NewReservation("1", animal, checkIn, checkOut)
