@@ -19,3 +19,17 @@ func CreateReservationHandler(w http.ResponseWriter, r *http.Request) {
 	newReservation := reservation.NewReservation("1", animal, checkIn, checkOut)
 	json.NewEncoder(w).Encode(newReservation)
 }
+
+func ListReservationsHandler(w http.ResponseWriter, r *http.Request) {
+	reservationRepo := repository.NewReservationRepository()
+	reservations, err := reservationRepo.GetAllReservations()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	json.NewEncoder(w).Encode(reservations)
+}
+
+func GetReservationHandler(w http.ResponseWriter, r *http.Request) {
+	// ... implement your code
+}
