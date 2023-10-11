@@ -45,6 +45,7 @@ Os repositórios fornecem uma camada de abstração sobre o acesso ao banco de d
 Os manipuladores estão localizados em `/internal/application/handler` e contêm a lógica para manipular requisições HTTP e responder a elas.
 
 ## Rotas
+![Screenshot_7](https://github.com/jcr04/AUAUPETS.go/assets/70778525/ab12836e-eecb-4066-a557-cb050f2ae7eb)
 
 As rotas da API são definidas em `internal/infrastructure/api/router.go`. Utilizamos a biblioteca `gorilla/mux` para definir as rotas.
 
