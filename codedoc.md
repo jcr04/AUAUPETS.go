@@ -72,7 +72,6 @@ Reservations:
 /reservations (GET): Listar todas as Reservas
 * - ![Screenshot_11](https://github.com/jcr04/AUAUPETS.go/assets/70778525/da887630-74f2-4304-b872-996226e372c6)
 
-
 ## Executando a API
 
 Para executar a API, siga os passos abaixo:
