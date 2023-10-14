@@ -27,6 +27,10 @@ func (h *AnimalHandler) CreateAnimalHandler(w http.ResponseWriter, r *http.Reque
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
+	// Configure o cabeçalho da resposta com o tipo de conteúdo JSON
+	w.Header().Set("Content-Type", "application/json")
+
 	json.NewEncoder(w).Encode(newAnimal) // Retorne o animal criado com o ID atribuído
 }
 
@@ -38,6 +42,10 @@ func (h *AnimalHandler) GetAnimalHandler(w http.ResponseWriter, r *http.Request)
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
+	// Configure o cabeçalho da resposta com o tipo de conteúdo JSON
+	w.Header().Set("Content-Type", "application/json")
+
 	json.NewEncoder(w).Encode(pet)
 }
 
@@ -47,6 +55,10 @@ func (h *AnimalHandler) ListAnimalsHandler(w http.ResponseWriter, r *http.Reques
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
+	// Configure o cabeçalho da resposta com o tipo de conteúdo JSON
+	w.Header().Set("Content-Type", "application/json")
+
 	json.NewEncoder(w).Encode(animals)
 }
 
@@ -64,6 +76,9 @@ func (h *AnimalHandler) UpdateAnimalHandler(w http.ResponseWriter, r *http.Reque
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
+	// Configure o cabeçalho da resposta com o tipo de conteúdo JSON
+	w.Header().Set("Content-Type", "application/json")
 
 	json.NewEncoder(w).Encode(updatedAnimal) // Retornando o animal atualizado
 }
