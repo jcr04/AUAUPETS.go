@@ -39,9 +39,27 @@ git clone https://github.com/jcr04/AUAUPETS.go.git
         Name VARCHAR(255),
         Breed VARCHAR(255),
         Age INT,
-        CheckIn DATE,
-        CheckOut DATE
+        Health VARCHAR(255),
+        Alergic VARCHAR(255)
          );
         ```
+        ```sql
+        CREATE TABLE Reservations (
+        ID VARCHAR(255) PRIMARY KEY,
+        Animal_ID INT,
+        CheckIn TIMESTAMP,
+        CheckOut TIMESTAMP,
+        FOREIGN KEY (Animal_ID) REFERENCES Pets(ID)
+        );
+        ```
+        ```sql
+        CREATE TABLE Hostings (
+        ID SERIAL PRIMARY KEY,
+        Name VARCHAR(255),
+        Reservation_ID VARCHAR(255),
+        FOREIGN KEY (Reservation_ID) REFERENCES Reservations(ID)
+        );
+        ```
+           
     2. Execute o servidor:
         go run cmd/server/main.go
