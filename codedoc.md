@@ -45,7 +45,7 @@ Os repositórios fornecem uma camada de abstração sobre o acesso ao banco de d
 Os manipuladores estão localizados em `/internal/application/handler` e contêm a lógica para manipular requisições HTTP e responder a elas.
 
 ## Rotas
-![Screenshot_12](https://github.com/jcr04/AUAUPETS.go/assets/70778525/97f7f649-af81-4765-a106-f0f1c83e86b4)
+![Screenshot_1](https://github.com/jcr04/AUAUPETS.go/assets/70778525/23dda212-1f98-44c7-9c77-bc8808bfe6f8)
 
 As rotas da API são definidas em `internal/infrastructure/api/router.go`. Utilizamos a biblioteca `gorilla/mux` para definir as rotas.
 
@@ -71,6 +71,11 @@ Reservations:
 * - ![Screenshot_10](https://github.com/jcr04/AUAUPETS.go/assets/70778525/7283bb50-505d-4ee0-9775-dd679fae9f2e)
 /reservations (GET): Listar todas as Reservas
 * - ![Screenshot_11](https://github.com/jcr04/AUAUPETS.go/assets/70778525/da887630-74f2-4304-b872-996226e372c6)
+
+Hosting: 
+/hosting (POST: Criar Hospedagem
+![Screenshot_2](https://github.com/jcr04/AUAUPETS.go/assets/70778525/1f9ca657-7022-4791-b998-81b4a7abb4ba)
+
 
 ## Executando a API
 
