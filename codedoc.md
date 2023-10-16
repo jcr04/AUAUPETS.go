@@ -52,7 +52,7 @@ As rotas da API são definidas em `internal/infrastructure/api/router.go`. Utili
 A API oferece os seguintes endpoints:
 
 Animals:
-/animals (POST): Criar animal 
+- /animals (POST): Criar animal 
 * - ![Screenshot_22](https://github.com/jcr04/AUAUPETS.go/assets/70778525/a9f02d16-d423-4aa7-b37f-ade47ffcbd24)
 * - ![Screenshot_23](https://github.com/jcr04/AUAUPETS.go/assets/70778525/c94846c0-049d-4103-ae21-fc0f27642338)
 /animals (GET): Listar Todos os Animais
@@ -67,14 +67,14 @@ Animals:
 * - ![Screenshot_5](https://github.com/jcr04/AUAUPETS.go/assets/70778525/3e6bea1c-4331-4bfa-bd05-d4222a31afe8)
 
 Reservations:
-/reservations (POST) Criar Reserva
+- /reservations (POST) Criar Reserva
 * - ![Screenshot_10](https://github.com/jcr04/AUAUPETS.go/assets/70778525/7283bb50-505d-4ee0-9775-dd679fae9f2e)
 /reservations (GET): Listar todas as Reservas
 * - ![Screenshot_11](https://github.com/jcr04/AUAUPETS.go/assets/70778525/da887630-74f2-4304-b872-996226e372c6)
 
 Hosting: 
-/hosting (POST: Criar Hospedagem
-![Screenshot_2](https://github.com/jcr04/AUAUPETS.go/assets/70778525/1f9ca657-7022-4791-b998-81b4a7abb4ba)
+- /hosting (POST: Criar Hospedagem
+* - ![Screenshot_2](https://github.com/jcr04/AUAUPETS.go/assets/70778525/1f9ca657-7022-4791-b998-81b4a7abb4ba)
 
 
 ## Executando a API
