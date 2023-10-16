@@ -13,14 +13,11 @@ import (
 )
 
 func generateUniqueReservationID() string {
-	// Gere um ID único aleatório
 	id := make([]byte, 16)
 	_, err := rand.Read(id)
 	if err != nil {
-		panic(err) // Tratar erro de geração de ID único
+		panic(err)
 	}
-
-	// Converta o ID em uma string hexadecimal
 	return hex.EncodeToString(id)
 }
 
