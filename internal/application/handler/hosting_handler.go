@@ -65,3 +65,19 @@ func (h *HostingHandler) CreateHostingHandler(w http.ResponseWriter, r *http.Req
 
 	log.Println("CreateHostingHandler concluído com sucesso") // Log de saída
 }
+
+func (h *HostingHandler) ListHostingHandler(w http.ResponseWriter, r *http.Request) {
+	hostings, err := h.hostingRepo.GetAllHostings()
+	if err != nil {
+		log.Printf("Erro ao obter todas as hospedagens: %v\n", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	err = json.NewEncoder(w).Encode(hostings)
+	if err != nil {
+		log.Printf("Erro codificando resposta JSON: %v\n", err)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+}

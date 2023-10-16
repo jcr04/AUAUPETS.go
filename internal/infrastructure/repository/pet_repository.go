@@ -17,10 +17,9 @@ func NewPetRepository() *PetRepository {
 
 func (repo *PetRepository) GetPetByID(id string) (*animal.Animal, error) {
 	var pet animal.Animal
-	err := repo.db.QueryRow("SELECT * FROM Pets WHERE ID = $1", id).Scan(
-		&pet.ID, &pet.Name, &pet.Breed, &pet.Age,
-		&pet.CheckIn, &pet.CheckOut,
-	)
+	err := repo.db.QueryRow(
+		"SELECT ID, Name, Breed, Age, Weight, Health, Alergic FROM Pets WHERE ID = $1", id,
+	).Scan(&pet.ID, &pet.Name, &pet.Breed, &pet.Age, &pet.Weight, &pet.Health, &pet.Alergic)
 	if err != nil {
 		return nil, err
 	}
@@ -29,11 +28,11 @@ func (repo *PetRepository) GetPetByID(id string) (*animal.Animal, error) {
 
 func (repo *PetRepository) CreateAnimal(a *animal.Animal) error {
 	query := `
-        INSERT INTO Pets (Name, Breed, Age, CheckIn, CheckOut)
-        VALUES ($1, $2, $3, $4, $5)
+        INSERT INTO Pets (Name, Breed, Age, Weight, Health, Alergic)
+        VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING ID;
     `
-	return repo.db.QueryRow(query, a.Name, a.Breed, a.Age, a.CheckIn, a.CheckOut).Scan(&a.ID)
+	return repo.db.QueryRow(query, a.Name, a.Breed, a.Age, a.Weight, a.Health, a.Alergic).Scan(&a.ID)
 }
 
 func (repo *PetRepository) ListAnimals() ([]*animal.Animal, error) {
@@ -46,7 +45,7 @@ func (repo *PetRepository) ListAnimals() ([]*animal.Animal, error) {
 	var animals []*animal.Animal
 	for rows.Next() {
 		var a animal.Animal
-		err := rows.Scan(&a.ID, &a.Name, &a.Breed, &a.Age, &a.CheckIn, &a.CheckOut)
+		err := rows.Scan(&a.ID, &a.Name, &a.Breed, &a.Age, &a.Weight, &a.Health, &a.Alergic)
 		if err != nil {
 			return nil, err
 		}
@@ -64,10 +63,10 @@ func (repo *PetRepository) ListAnimals() ([]*animal.Animal, error) {
 func (repo *PetRepository) UpdateAnimal(id string, a *animal.Animal) error {
 	query := `
 		UPDATE Pets
-		SET Name = $2, Breed = $3, Age = $4, CheckIn = $5, CheckOut = $6
+		SET Name = $2, Breed = $3, Age = $4, Weight = $5, Health = $6, Alergic = $7
 		WHERE ID = $1;
 	`
-	_, err := repo.db.Exec(query, id, a.Name, a.Breed, a.Age, a.CheckIn, a.CheckOut)
+	_, err := repo.db.Exec(query, id, a.Name, a.Breed, a.Age, a.Weight, a.Health, a.Alergic)
 	return err
 }
 

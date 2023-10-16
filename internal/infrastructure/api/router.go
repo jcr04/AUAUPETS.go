@@ -37,6 +37,7 @@ func NewRouter() *mux.Router {
 	// Crie uma nova instância de HostingHandler e use-a para chamar os métodos relacionados a hospedagem
 	hostingHandler := handler.NewHostingHandler(hostingRepo, reservationRepo)
 	r.HandleFunc("/hostings", hostingHandler.CreateHostingHandler).Methods("POST")
+	r.HandleFunc("/hostings", hostingHandler.ListHostingHandler).Methods("GET")
 
 	return r
 }
