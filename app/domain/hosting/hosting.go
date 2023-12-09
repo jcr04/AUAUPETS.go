@@ -1,7 +1,7 @@
 package hosting
 
 import (
-	"github.com/jcr04/AUAUPETS.go/internal/domain/reservation"
+	"github.com/jcr04/AUAUPETS.go/app/domain/reservation"
 )
 
 type Hosting struct {

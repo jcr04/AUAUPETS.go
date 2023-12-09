@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/jcr04/AUAUPETS.go/internal/domain/animal"
-	"github.com/jcr04/AUAUPETS.go/internal/domain/reservation"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/database"
+	"github.com/jcr04/AUAUPETS.go/app/domain/animal"
+	"github.com/jcr04/AUAUPETS.go/app/domain/reservation"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/database"
 )
 
 type ReservationRepository struct {

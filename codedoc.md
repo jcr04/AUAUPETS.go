@@ -16,7 +16,7 @@ A API AUAUPETS é uma solução de gestão de animais e reservas construída em 
 
 O projeto segue uma estrutura modular e organizada, facilitando a manutenção e a expansão. Aqui estão os principais diretórios e arquivos do projeto:
 
-- `/internal`:
+- `/app`:
   - `/application/handler`: Contém os manipuladores de requisições HTTP.
   - `/domain`: Contém os modelos de domínio.
   - `/infrastructure`: Contém código relacionado à infraestrutura, como configuração de banco de dados e roteamento.
@@ -24,30 +24,30 @@ O projeto segue uma estrutura modular e organizada, facilitando a manutenção e
 
 ## Configuração do Banco de Dados
 
-A configuração do banco de dados está localizada em `internal/infrastructure/database/db.go`. Utilizamos o PostgreSQL como nosso banco de dados.
+A configuração do banco de dados está localizada em `app/infrastructure/database/db.go`. Utilizamos o PostgreSQL como nosso banco de dados.
 
 ## Modelos de Domínio
 
-Os modelos de domínio são definidos em `/internal/domain`. Atualmente, temos dois modelos principais:
+Os modelos de domínio são definidos em `app/domain`. Atualmente, temos dois modelos principais:
 
 - `Animal`: Representa um animal.
 - `Reservation`: Representa uma reserva.
 
 ## Repositórios
 
-Os repositórios fornecem uma camada de abstração sobre o acesso ao banco de dados. Eles estão localizados em `/internal/infrastructure/repository`.
+Os repositórios fornecem uma camada de abstração sobre o acesso ao banco de dados. Eles estão localizados em `/app/infrastructure/repository`.
 
 - `PetRepository`: Provê métodos para interagir com os registros de animais no banco de dados.
 - `ReservationRepository`: Provê métodos para interagir com os registros de reservas no banco de dados.
 
 ## Manipuladores
 
-Os manipuladores estão localizados em `/internal/application/handler` e contêm a lógica para manipular requisições HTTP e responder a elas.
+Os manipuladores estão localizados em `app/application/handler` e contêm a lógica para manipular requisições HTTP e responder a elas.
 
 ## Rotas
 ![Screenshot_1](https://github.com/jcr04/AUAUPETS.go/assets/70778525/014cdaea-7e69-4fb6-81f3-6f3a424be0d0)
 
-As rotas da API são definidas em `internal/infrastructure/api/router.go`. Utilizamos a biblioteca `gorilla/mux` para definir as rotas.
+As rotas da API são definidas em `app/infrastructure/api/router.go`. Utilizamos a biblioteca `gorilla/mux` para definir as rotas.
 
 A API oferece os seguintes endpoints:
 

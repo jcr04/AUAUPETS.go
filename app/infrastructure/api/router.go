@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/jcr04/AUAUPETS.go/internal/application/handler"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/repository"
+	"github.com/jcr04/AUAUPETS.go/app/application/handler"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/repository"
 )
 
 func NewRouter() *mux.Router {

@@ -5,8 +5,8 @@ import (
 	"log" // Importe o pacote log
 	"net/http"
 
-	"github.com/jcr04/AUAUPETS.go/internal/domain/hosting"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/repository"
+	"github.com/jcr04/AUAUPETS.go/app/domain/hosting"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/repository"
 )
 
 type HostingHandler struct {

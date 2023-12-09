@@ -1,12 +1,10 @@
-// C:\Users\Usuario\go\AUAUPETS.go\internal\infrastructure\repository\hosting_repository.go
-
 package repository
 
 import (
 	"strconv"
 
-	"github.com/jcr04/AUAUPETS.go/internal/domain/hosting"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/database"
+	"github.com/jcr04/AUAUPETS.go/app/domain/hosting"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/database"
 )
 
 type HostingRepository struct{}

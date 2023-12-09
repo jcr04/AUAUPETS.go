@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/jcr04/AUAUPETS.go/internal/domain/reservation"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/repository"
+	"github.com/jcr04/AUAUPETS.go/app/domain/reservation"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/repository"
 )
 
 func generateUniqueReservationID() string {

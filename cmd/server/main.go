@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/api"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/database"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/api"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/database"
 )
 
 func main() {

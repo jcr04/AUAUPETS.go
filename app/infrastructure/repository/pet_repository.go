@@ -3,8 +3,8 @@ package repository
 import (
 	"database/sql"
 
-	"github.com/jcr04/AUAUPETS.go/internal/domain/animal"
-	"github.com/jcr04/AUAUPETS.go/internal/infrastructure/database"
+	"github.com/jcr04/AUAUPETS.go/app/domain/animal"
+	"github.com/jcr04/AUAUPETS.go/app/infrastructure/database"
 )
 
 type PetRepository struct {
