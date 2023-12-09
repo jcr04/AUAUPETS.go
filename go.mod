@@ -1,6 +1,6 @@
 module github.com/jcr04/AUAUPETS.go
 
-go 1.16
+go 1.21.3
 
 require (
 	github.com/gorilla/mux v1.8.0
