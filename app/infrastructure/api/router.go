@@ -44,5 +44,5 @@ func NewRouter() *mux.Router {
 
 func StartServer() {
 	http.Handle("/", NewRouter()) // Use NewRouter aqui para registrar as rotas
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8081", nil)
 }
